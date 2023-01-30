@@ -8,7 +8,8 @@ class Student:
         print("Привіт я з,явился")
 
     def grow2(self, mental_ability=0.5):
-        self.Mental_ability += 0.5
+        self.mental_ability += mental_ability
+        print("Я підвищів свій рівень знань")
 
     def grow(self, height=1):
         self.height += height
