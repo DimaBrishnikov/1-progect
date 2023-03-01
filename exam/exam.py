@@ -9,7 +9,7 @@ def register():
     password = input("Ведите пароль")
 
     cur.execute(f"select * from users where login = ('{login}')")
-    user = cur.fetchone()
+    user = cur.fetchall()
 
     if user:
         print("Пользователь уже сушествует")
@@ -24,7 +24,7 @@ def login():
        password = input("Ведите пароль")
 
        cur.execute(f"select * from users where login= ('{login}')")
-       user = cur.fetchone()
+       user = cur.fetchall()
 
        if user and password == user[1]:
            print("Успішний вхід!")
